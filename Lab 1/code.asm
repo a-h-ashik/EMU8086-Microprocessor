@@ -108,7 +108,74 @@ MAIN PROC
     ;DIV BX ;result AX = B5FE4 and remainder DX = 126
     ;Not possible. The reason is B5FE4 is more than 16 bit
     
+    ;task 09
+    ;memory registers
+    ;MOV AX, BX
+    ;MOV BX, CX
     
+    ;MOV DS, AX
+    ;MOV CS, BX
+    
+    ;MOV DI, AX
+    ;MOV SI, BX
+    
+    ;segment registers
+    ;MOV AX, DS
+    ;MOV BX, CS
+    
+    ;MOV DI, DS
+    ;MOV SI, CS
+    
+    ;memory location
+    ;MOV AX, SI
+    ;MOV BX, DI
+    
+    ;MOV DS, SI
+    ;MOV CS, DI
+    
+    ;task 10
+    ;general registers
+    ;ADD AX, BX
+    ;ADD AX, CX
+    ;ADD DI, AX
+    ;ADD SI, BX
+    
+    ;SUB AX, BX
+    ;SUB AX, CX
+    ;SUB DI, AX
+    ;SUB SI, BX        
+    
+    ;memory location
+    ;ADD DI, AX
+    ;ADD SI, BX
+    
+    ;SUB DI, AX
+    ;SUB SI, BX
+    
+    ;task 11
+    MOV AX, 1
+    MOV BX, 2
+    ADD AX, BX ; (1+2) = 3
+    MOV CX, AX
+    
+    MOV AX, 3
+    MOV BX, 1
+    SUB AX, BX ; (3-1) = 2
+    
+    MUL CX ; (2*3) = 6
+    
+    MOV BX, 5
+    DIV BX ; (6/5)
+    MOV CX, AX   
+    
+    MOV AX, 1
+    MOV BX, 2
+    MUL BX ; (1*2)
+    NEG AX ; -(1*2)
+    
+    ADD AX, 3
+    ADD AX, 2
+    ADD AX, CX
     
     EXIT:
     MOV AH, 4CH
