@@ -4,7 +4,7 @@
     INP_MSG DB "ENTER A CHARACTER: $"
 .CODE
 MAIN PROC
-    ;INITIALIZING
+    ;initializing
     MOV AX, @DATA
     MOV DS, AX
     

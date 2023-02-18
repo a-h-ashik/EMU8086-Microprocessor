@@ -6,7 +6,7 @@
     OUT_MSG DB "Result: $"
 .CODE
 MAIN PROC
-    ;INITIALIZING
+    ;initializing
     MOV AX, @DATA
     MOV DS, AX
     

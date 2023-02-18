@@ -4,7 +4,7 @@
     MSG DB "ENTER THREE INITIALS: $"
 .CODE
 MAIN PROC
-    ;INITIALIZING
+    ;initializing
     MOV AX, @DATA
     MOV DS, AX
     
