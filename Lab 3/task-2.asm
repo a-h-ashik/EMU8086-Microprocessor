@@ -3,7 +3,8 @@
 .DATA
     A DB "AL COMES FIRST$" 
     B DB "BL COMES FIRST$"
-
+      
+      
 .CODE
 MAIN PROC
     MOV AX, @DATA

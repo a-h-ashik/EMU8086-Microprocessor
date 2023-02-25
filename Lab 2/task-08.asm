@@ -8,6 +8,8 @@ MAIN PROC
     MOV AX, @DATA
     MOV DS, AX
     
+    ;repeat same code 10 times
+    ;------------
     MOV AH, 9
     LEA DX, MSG
     INT 21H
@@ -17,6 +19,7 @@ MAIN PROC
     INT 21H
     MOV DL, 0DH
     INT 21H
+    ;------------
     
     MOV AH, 9
     LEA DX, MSG

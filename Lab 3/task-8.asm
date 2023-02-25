@@ -1,0 +1,59 @@
+.MODEL SMALL
+.STACK 100H
+.DATA
+    V DB "VOWEL$"
+    C DB "CONSONANT$"
+
+.CODE
+MAIN PROC
+    MOV AX, @DATA
+    MOV DS, AX
+    
+    MOV AH, 1
+    INT 21H
+    
+    CONDITION1:
+    CMP AL, 60H
+    JNLE CONDITION2
+    
+    ELSE:
+    ADD AL, 20H
+    
+    CONDITION2:
+    CMP AL, 61H
+    JE PRINTV
+    
+    CONDITION3:
+    CMP AL, 65H
+    JE PRINTV
+    
+    CONDITION4:
+    CMP AL, 69H
+    JE PRINTV
+    
+    CONDITION5:
+    CMP AL, 6FH
+    JE PRINTV
+    
+    CONDITION6:
+    CMP AL, 75H
+    JE PRINTV
+    JMP PRINTC
+    
+    PRINTV:
+    MOV AH, 9
+    LEA DX, V
+    INT 21H
+    JMP EXIT
+    
+    PRINTC:
+    MOV AH, 9
+    LEA DX, C
+    INT 21H
+    
+    EXIT:
+    MOV AH, 4CH
+    INT 21H
+    MAIN ENDP
+END MAIN
+    
