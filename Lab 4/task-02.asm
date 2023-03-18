@@ -1,0 +1,18 @@
+.MODEL SMALL
+.STACK 100H
+.CODE
+MAIN PROC
+    MOV CX, 148
+    MOV BX, 1
+    MOV DX, 0
+    
+    START:
+    CMP DX, 148
+    JG EXIT
+    ADD DX, BX
+    ADD BX, 3
+    LOOP START
+    
+    EXIT:
+    MOV AX, DX
+    HLT
